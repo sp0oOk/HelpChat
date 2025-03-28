@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+}
+
+group = 'me.spook.project'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+}
+
+dependencies {
+    compileOnly "org.spigotmc:spigot-api:1.18.2-R0.1-SNAPSHOT"
+}
+
+java {
+    toolchain.languageVersion = JavaLanguageVersion.of(17)
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+processResources {
+    def props = [version: version]
+    inputs.properties(props)
+    filesMatching('plugin.yml') {
+        expand props
+    }
+}
+
+tasks.register('copyToReleases', Copy) {
+    from jar
+    into "../releases"
+    dependsOn jar
+}
+
+tasks.build.finalizedBy(tasks.copyToReleases)

@@ -1,0 +1,4 @@
+name: "StopMobEggs"
+version: 1.0-SNAPSHOT
+main: me.spook.project.StopMobEggsPlugin
+api-version: '1.18'

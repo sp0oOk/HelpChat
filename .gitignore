@@ -1,0 +1,23 @@
+# Qodo Git Ignore
+.qodo
+
+# Ignore build directories in all project folders
+**/build/
+**/bin/
+
+# Gradle specific
+**/.gradle/
+**/gradlew
+**/gradlew.bat
+**/gradle-wrapper.jar
+**/gradle-wrapper.properties
+**/gradle-app.setting
+.gradletasknamecache
+
+# IDE specific
+**/.idea/
+**/*.iml
+**/*.iws
+**/.settings/
+**/.classpath
+**/.project
