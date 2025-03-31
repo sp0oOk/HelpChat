@@ -1,0 +1,5 @@
+name: "EssentialsPapiHook"
+version: 1.0-SNAPSHOT
+main: me.spook.project.EssentialsPapiHookPlugin
+api-version: '1.18'
+depend: [PlaceholderAPI]
