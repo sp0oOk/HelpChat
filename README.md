@@ -26,3 +26,5 @@ Contributions from anyone and everyone are welcome! Whether you're fixing a bug,
 2. **Create a Branch:** Crate a new branch for your work (`git checkout -b <...>`)
 3. **Commit Your Changes:** Make your changes and commit them with clear, descriptive commit messages.
 4. **Submit a Pull Request:** Once you're done with your changes, open a pull request for review. It will be reviewed, and merged ASAP.
+
+**NOTE:** You can generate your own project automagically using `create_project.bat` and supplying a topic to it! this will ensure your addition of merged.
